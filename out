@@ -1,0 +1,24 @@
+     {
+        "Messages": [{
+          "MessageId": "Id_1",
+          "ReceiptHandle": "ReceiptHandle_1",
+          "MD5OfBody": "fake_md5",
+          "Body": "Message 1",
+          "Attributes": {
+            "SenderId": "13",
+            "ApproximateReceiveCount": "5"
+          },
+          "MessageAttributes": {
+            "TestStringAttribute": {
+              "StringValue": "Test",
+              "DataType": "String"
+            }
+          }
+        },
+        {
+          "MessageId": "Id_2",
+          "ReceiptHandle": "ReceiptHandle_22",
+          "Body": "Message 2"
+        }]
+      }
+
