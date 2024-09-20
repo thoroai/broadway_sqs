@@ -53,10 +53,15 @@ defmodule BroadwaySQS.Options do
         type: :keyword_list,
         default: [],
         doc: """
-        A set of options that overrides the default ExAws configuration
+        A set of options that overrides the default AWS client library configuration
         options. The most commonly used options are: `:access_key_id`, `:secret_access_key`,
-        `:scheme`, `:region` and `:port`. For a complete list of configuration options and
-        their default values, please see the `ExAws` documentation.
+        `:scheme` (for `ExAws`), `proto` (for `aws-elixir`), `:region` and `:port`. For a
+        complete list of configuration options and their default values, please see the
+        `ExAws` or `aws-elixir` and `aws_credentials` documentation. Note that explicitly
+        provided options will override the values fetched by the `aws_credentials` library.
+        Furthermore, the setting for choosing the set and order of credential providers is
+        only available via the `aws_credentials` application environment setting
+        `credential_providers`. See the library documentation for usage.
         """
       ],
       max_number_of_messages: [
